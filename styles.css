@@ -3,3 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f334;
+}
+
+#container{
+    width: 50%;
+    height: 60vh;
+}
