@@ -39,6 +39,19 @@ h1{
     align-self: center;
     text-align: center;
     color: #fff;
+    position: relative;
+}
+
+h1::after{
+    content: "";
+    width: 100%;
+    height: 7px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    z-index: 1;
+    border-radius: 10px;
 }
 
 
@@ -47,6 +60,7 @@ h1{
     height: 180px;
     border-radius: 50%;
     /* border-right: 10px solid #fff; */
+    border: 1px solid #7c2434;
 }
 
 img{
@@ -69,5 +83,20 @@ img{
     font-size: 1.2em;
     width: 90%;
     text-align: center;
+}
+
+button{
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: #95505d;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:#7c2434;
 }
 
