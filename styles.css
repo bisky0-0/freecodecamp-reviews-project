@@ -1,11 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -14,27 +14,32 @@ body{
     background-color: #bd6878;
 }
 
-div{
+div {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
 }
 
-#container{
+#container {
     width: 50%;
     min-width: 700px;
     height: 50vh;
+    position: relative;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
     color: #000;
-    background-color: rgba(246, 246, 246, 0.683);
+    background-color: rgba(246, 246, 246);
     border-radius: 20px;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-h1{
+h1 {
     font-size: 5em;
     align-self: center;
     text-align: center;
@@ -42,7 +47,7 @@ h1{
     position: relative;
 }
 
-h1::after{
+h1::after {
     content: "";
     width: 100%;
     height: 7px;
@@ -54,38 +59,50 @@ h1::after{
     border-radius: 10px;
 }
 
-
-#photo{
+#photo {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     /* border-right: 10px solid #fff; */
     border: 1px solid #7c2434;
+    position: relative;
 }
 
-img{
+#photo::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #95505d;
+    border-radius: 50%;
+    z-index: -1;
+    left: 5px;
+    bottom: -3px;
+}
+
+img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
 
-#name{
+#name {
     text-transform: capitalize;
     font-size: 2em;
 }
 
-#job{
+#job {
     text-transform: capitalize;
     font-size: 1.1em;
 }
 
-#review{
+#review {
     font-size: 1.2em;
     width: 90%;
     text-align: center;
 }
 
-button{
+button {
     width: 130px;
     height: 40px;
     border: none;
@@ -93,10 +110,17 @@ button{
     color: #fff;
     font-size: 1.1rem;
     border-radius: 10px;
+    position: absolute;
+    bottom: 25px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-button:hover{
-    background-color:#7c2434;
+button:hover {
+    background-color: #873d4b;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
-
